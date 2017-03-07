@@ -24,7 +24,7 @@ public class FutureTest {
   public void completeMeFuture(){
     long start = System.currentTimeMillis();
     Stream<CompletableFuture<Integer>> completableFutureStream = IntStream.range(0, 10).boxed().map(i -> CompletableFuture.supplyAsync(() -> new DoSomething().getInt()));
-    completableFutureStream.
+
     System.out.printf("Total time for CompletableFuture is %f seconds",(System.currentTimeMillis() - start)/1000f);
   }
 
